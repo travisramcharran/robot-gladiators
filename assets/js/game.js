@@ -17,6 +17,8 @@ var enemyHealth = 50;
 var enemyAttack = 12;
 // this is also a number data type
 
+console.log(enemyName, enemyAttack, enemyHealth);
+
 /* create function. This is a function expression: when we a create a fxn by assigning it a variable. */
 var fight = function() {
     // Alert players that they are starting the round
@@ -28,7 +30,17 @@ var fight = function() {
     // Log a resulting message to the console so we know that it worked.
     console.log(
         playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
+    
     );
+
+    //check enemy's health
+    if (enemyHealth <= 0) {
+        window.alert(enemyName + " had died!");
+    }
+
+    else {
+        window.alert(enemyName + " still has " + enemyHealth + " health left. ");
+    }
 
     // Subtract the value of 'enemyAttack from the value of 'playerHealth' and use that result to update the value in the 'playerHealth' variable.
         playerHealth = playerHealth - enemyAttack
@@ -37,11 +49,18 @@ var fight = function() {
     console.log(
         enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
     );
+    // check players health
+    if (playerHealth <= 0) {
+        window.alert(playerName + " has died! ");
+    }
+    else {
+        window.alert(playerName + " still has " + playerHealth + " health left. ");
+    }
 };
 // this executes the function
 fight();
 
-// what is this? console.log shows developers where to debug
+// this will show the players name in the console tab
 console.log(playerName);
 
 console.log("this logs a string, good for leaving yourself a message");
@@ -50,7 +69,7 @@ console.log("this logs a string, good for leaving yourself a message");
 
 console.log(10 + 10);
 
-//what is this?
+//this is a string concatenation and will show the players name as 'Our robots name is 'player name', which in this case is Tony.
 
 console.log("Our robot's name is " + playerName);
 
