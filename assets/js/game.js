@@ -10,8 +10,9 @@ var playerMoney = 10;
 // I can also log multiple values at once like this
 console.log(playerName, playerAttack, playerHealth, playerMoney);
 
-var enemyName = "Roborto";
-//the enemyName variable is a String data type
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+//the enemyNames variable is a String data type
+//this is now an array
 
 var enemyHealth = 50; 
 // the enemyHealth variable is a Number data type
@@ -19,10 +20,8 @@ var enemyHealth = 50;
 var enemyAttack = 12;
 // this is also a number data type
 
-console.log(enemyName, enemyAttack, enemyHealth);
-
 /* create function. This is a function expression: when we a create a fxn by assigning it a variable. */
-var fight = function() {
+var fight = function(enemyNames) {
     // Alert players that they are starting the round
     window.alert("Welcome to Robot Gladiators!");
 
@@ -39,21 +38,21 @@ var fight = function() {
 
      // Log a resulting message to the console so we know that it worked.
      console.log(
-         playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
+         playerName + " attacked " + enemyNames + ". " + enemyNames + " now has " + enemyHealth + " health remaining."
      );
     
      //check enemy's health
         if (enemyHealth <= 0) {
-        window.alert(enemyName + " had died!");
+        window.alert(enemyNames + " had died!");
         } else {
-        window.alert(enemyName + " still has " + enemyHealth + " health left. ");
+        window.alert(enemyNames + " still has " + enemyHealth + " health left. ");
         }
      // Subtract the value of 'enemyAttack from the value of 'playerHealth' and use that result to update the value in the 'playerHealth' variable.
      playerHealth = playerHealth - enemyAttack
 
      // Log a resulting message to the console so we know that it worked.
      console.log(
-        enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
+        enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
      );
     
      // check players health
@@ -86,15 +85,8 @@ var fight = function() {
         window.alert("You need to choose a valid option. Try Again!");
      }
     
-    
-    
-
-     
-
-    
-
-    
-    
 };
-// this executes the function
-fight();
+// this executes the fight function
+for(var i =0; i < enemyNames.length; i++) {
+fight(enemyNames[i]);
+}
