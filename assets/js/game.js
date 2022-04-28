@@ -31,7 +31,7 @@ var fight = function() {
     console.log(promptFight);
 
     //if player choses to fight, then fight
- if (promptFight === "fight" || promptFight == "FIGHT") 
+ if (promptFight === "fight" || promptFight === "FIGHT") 
     {
 
         //remove enemys health by subtracting the amount set in the playerAttack variable
@@ -81,7 +81,7 @@ var fight = function() {
             fight();
         }
     } 
-     
+     // if player did not choose a correct reply
      else {
         window.alert("You need to choose a valid option. Try Again!");
      }
@@ -98,23 +98,3 @@ var fight = function() {
 };
 // this executes the function
 fight();
-
-// this will show the players name in the console tab
-console.log(playerName);
-
-
-//this is a string concatenation and will show the players name as 'Our robots name is 'player name', which in this case is Tony.
-console.log("this logs a string, good for leaving yourself a message");
-console.log("Our robot's name is " + playerName);
-
-
-
-
-
-/* this creates a function, named "fight". This is a function declaration: when we create a fxn using the function keyword first */
-
-function fight() {
-    window.alert("The FIGHT has BEGUN!")
-
-}
-//fight();
